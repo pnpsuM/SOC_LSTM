@@ -78,10 +78,10 @@ def split_data(x_data, y_data):
     
     split_len = int(round(x_data.shape[0] * 0.7))
     print(f'split_len = {split_len}')
-    x_train = x_data[:, :, :split_len]
-    y_train = y_data[:, :, :split_len]
-    x_test = x_data[:, :, split_len:]
-    y_test = y_data[:, :, split_len:]
+    x_train = x_data[:split_len, :, :]
+    y_train = y_data[:split_len, :, :]
+    x_test = x_data[split_len:, :, :]
+    y_test = y_data[split_len:, :, :]
     print(f'x_train = {x_train.shape}')
     print(f'y_train = {y_train.shape}')
     
