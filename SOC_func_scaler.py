@@ -1,6 +1,6 @@
+import matplotlib.pyplot as pl
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as pl
 from sklearn.preprocessing import MinMaxScaler
 
 scaler = MinMaxScaler(feature_range=(0.1, 1.1))
